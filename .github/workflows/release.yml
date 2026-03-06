@@ -48,7 +48,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Go
-      - uses: actions/setup-go@v5
+        uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
 
@@ -84,7 +84,7 @@ jobs:
           shasum -a 256 "${FILE}" > "${FILE}.sha256"
 
       - name: Upload artifacts
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BINARY_NAME }}-${{ matrix.target }}
           path: |
@@ -108,7 +108,7 @@ jobs:
           fi
 
       - name: Download artifact
-      - uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v7
         with:
           path: artifacts
           merge-multiple: true

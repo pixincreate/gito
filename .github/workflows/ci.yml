@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Go
-      - uses: actions/setup-go@v5
+        uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
 
@@ -50,10 +50,10 @@ jobs:
 
     steps:
       - name: Actions Checkout
-      - uses: actions/checkout@v6
+        uses: actions/checkout@v6
 
       - name: Setup Go
-      - uses: actions/setup-go@v5
+        uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
 
@@ -67,7 +67,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Go
+      - name: Actions Checkout
         uses: actions/checkout@v6
 
       - name: Setup Go
