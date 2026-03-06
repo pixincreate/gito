@@ -25,7 +25,11 @@ Backend selection:
   - Uses 'gh' CLI if installed and authenticated
   - Falls back to 'curl' with GITHUB_PAT environment variable
   - Override with --backend=gh or --backend=curl`,
-	Version: "0.1.0",
+	Version: "dev",
+}
+
+func SetVersion(v string) {
+	rootCmd.Version = v
 }
 
 func Execute() error {
